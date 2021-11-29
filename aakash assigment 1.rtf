@@ -1,0 +1,30 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE Str1, alpha, isPanagram : STRING\par
+DECLARE thisChar : CHARACTER\par
+DECLARE Count : INTEGER\par
+\par
+Str1 <-- ""\par
+alpha <-- ""\par
+isPanagram <-- ""\par
+thisChar <-- ''\par
+Count <-- 0\par
+\par
+INPUT("Enter Str1", Str1)\par
+Str1 <-- UPPER(Str1)\par
+alpha <-- "ABCDEFGHIJKLMNOPQRSTUVWXYZ"\par
+isPanagram <-- "isTrue"\par
+\par
+FOR Count <-- 1 To LENGTH(alpha)\par
+    thisChar <-- MID(alpha, Count, 1)\par
+    If LOCATE(thisChar, Str1)= 0 Then\par
+       isPanagram <-- "isFalse"\par
+       ExitFor \par
+    EndIf\par
+NEXT \par
+If isPanagram = "isTrue" Then\par
+   OUTPUT("This String contains all alphabets")\par
+Else OUTPUT("This String does not contain all alphabets")\par
+EndIf\par
+}

@@ -1,0 +1,34 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE Str1 : STRING\par
+DECLARE thisChar, Char1 : CHARACTER\par
+DECLARE Count ,CharCount, alphaCount, digitCount, specialCount : INTEGER\par
+\par
+Str1 <-- \ldblquote\rdblquote\par
+thisChar <-- \lquote\rquote\par
+Char1 <-- \lquote\rquote\par
+CharCount <-- 0\par
+alphaCount <-- 0\par
+digitCount <-- 0\par
+specialCount <-- 0\par
+\par
+INPUT("Enter Str1 : ", Str1)\par
+INPUT("Enter character to search for: ", Char1)\par
+\par
+FOR Count <-- 1 To LENGTH(Str1)\par
+thisChar <-- Mid(Str1, Count, 1)\par
+If thisChar = Char1 Then\par
+CharCount <-- CharCount + 1\par
+ElseIf Asc(thisChar) >= 65 AND Asc(thisChar) <= 90 OR Asc(thisChar) >= 97 AND Asc(thisChar) <= 122 Then\par
+alphaCount <-- alphaCount + 1\par
+ElseIf Asc(thisChar) >= 48 AND Asc(thisChar) <= 57 Then\par
+digitCount <-- digitCount + 1\par
+Else specialCount <-- specialCount + 1\par
+EndIf\par
+NEXT\par
+OUTPUT("Amount of times the character occured: ", CharCount)\par
+OUTPUT("alphabet count: ", alphaCount)\par
+OUTPUT("digit count: ", digitCount)\par
+OUTPUT("other character count: ", specialCount)\par
+}

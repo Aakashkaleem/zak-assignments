@@ -1,0 +1,24 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE thisChar, firstChar : CHARACTER\par
+DECLARE Count: INTEGER\par
+\par
+Str1 <-- ""\par
+Str2 <-- ""\par
+thisChar <-- ''\par
+Count <-- 0\par
+\par
+INPUT("Enter Str1: ", Str1)\par
+firstChar <-- LEFT(Str1, 1)\par
+Str2 <-- Str2 + firstChar\par
+\par
+FOR Count<-- 2 To LENGTH(Str1)\par
+thisChar <-- MID(Str1, Count, 1)\par
+IF thisChar = firstChar Then\par
+Str2 <-- Str2 + "*"\par
+ELSE Str2 <-- Str2 + thisChar\par
+EndIf\par
+NEXT\par
+OUTPUT("Altered string: ", Str2)\par
+}

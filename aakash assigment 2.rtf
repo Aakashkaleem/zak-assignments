@@ -1,0 +1,26 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE Str1, Str2 : String\par
+DECLARE Char1, Char2, thisChar : Char\par
+DECLARE Count : INTEGER\par
+\par
+Str1 <-- \ldblquote\rquote\par
+Str2 <-- \ldblquote\rdblquote\par
+Char1 <-- \lquote\rquote\par
+Char2 <-- \lquote\rquote\par
+thisChar <-- \lquote\rquote\par
+Count <-- 0\par
+INPUT(\ldblquote Enter Str1: \ldblquote , Str1)\par
+INPUT(\ldblquote Enter character to be replaced: \ldblquote , Char1)\par
+INPUT(\ldblquote Enter character to be placed instead: \ldblquote , Char2)\par
+\par
+For Count<-- 1 To LENGTH(Str1)\par
+thisChar <-- Mid(Str1, Count, 1)\par
+If thisChar = Char1 Then\par
+Str2 <-- Str2 & Char2\par
+Else Str2<-- Str2 & thisChar\par
+EndIf\par
+Next\par
+OUTPUT(\ldblquote Substituted String: \ldblquote , Str2)\par
+}

@@ -1,0 +1,33 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 Dim Str1 As String\par
+Dim Char1 As Char\par
+Dim a, characters, alphabets, digits As Integer\par
+\par
+        Str1 = ""\par
+        Char1 = ""\par
+        a = 0\par
+        alphabets = 0\par
+        digits = 0\par
+        characters = 0\par
+\par
+        Console.Write("Enter Statement to process:")\par
+        Str1 = Console.ReadLine\par
+\par
+        characters = Len(Str1)\par
+\par
+        For i = 1 To Len(Str1)\par
+            Char1 = Mid(Str1, i, 1)\par
+            Char1 = UCase(Char1)\par
+            If Char1 >= "A" And Char1 <= "Z" Then\par
+                alphabets = alphabets + 1\par
+            ElseIf Char1 >= "0" And Char1 <= "9" Then\par
+                digits = digits + 1\par
+            End If\par
+        Next\par
+        Console.WriteLine("Alphabets are: " & alphabets)\par
+        Console.WriteLine("Digits are: " & digits)\par
+        Console.WriteLine("characters are:" & characters)\par
+        Console.ReadKey()\par
+}

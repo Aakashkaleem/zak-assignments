@@ -1,0 +1,30 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 Dim Char1, Char2, Char3 As Char\par
+Dim Highest, Count, a, b As Integer\par
+Dim Str1 As String\par
+\par
+        Char1 = ""\par
+        Highest = 0\par
+        Count = 0\par
+\par
+        Console.Write("Enter a Phrase: ")\par
+        Str1 = Console.ReadLine\par
+\par
+        For a = 1 To Len(Str1)\par
+            Char3 = Mid(Str1, a, 1)\par
+            Count = 0\par
+            For b = 1 To Len(Str1)\par
+                Char2 = Mid(Str1, b, 1)\par
+                If Char2 = Char3 Then Count = Count + 1\par
+            Next\par
+\par
+            If Count > Highest Then\par
+                Highest = Count\par
+                Char1 = Char3\par
+            End If\par
+        Next\par
+        Console.WriteLine(Char1 & " appeared " & Highest & " number of times.")\par
+        Console.ReadKey()\par
+}

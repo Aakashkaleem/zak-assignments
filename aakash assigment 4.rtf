@@ -1,0 +1,32 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE Str1 : String\par
+DECLARE myChar, thisChar, nextChar : CHARACTER\par
+DECLARE Count, Count2, Count3, Highest : INTEGER\par
+Str1 <-- ""\par
+myChar <-- ''\par
+thisChar <-- ''\par
+nextChar <-- ''\par
+Count <-- 0\par
+k <-- 0\par
+l <-- 0\par
+Highest <-- 0\par
+\par
+INPUT("Enter Str1 : ", Str1)\par
+\par
+For Count <-- 1 To LENGTH(Str1)\par
+thisChar <-- Mid(St1, Count, 1)\par
+Count3 <-- 0\par
+For Count2 <-- 1 To LENGTH(Str1)\par
+nextChar <-- Mid(Str1, Count2, 1)\par
+If thisChar = nextChar Then\par
+Count3 = Count3 + 1\par
+EndIf\par
+Next\par
+If Count3 > Highest Then\par
+Highest <-- Count3\par
+myChar <-- thisChar\par
+Next\par
+OUTPUT(myChar, "occured", Highest, "no of times")\par
+}

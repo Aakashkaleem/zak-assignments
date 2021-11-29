@@ -1,0 +1,35 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 DECLARE Str1 : STRING\par
+DECLARE thisChar : CHARACTER\par
+DECLARE Count, ACount, ECount, ICount, OCount, UCount : INTEGER\par
+\par
+Str1 <-- ""\par
+thisChar <-- ''\par
+Count <-- 0\par
+ACount <-- 0\par
+ECount <-- 0\par
+ICount <-- 0\par
+OCount <-- 0\par
+UCount <-- 0\par
+\par
+INPUT("Enter Str1: ", Str1)\par
+Str1 <-- UPPER(Str1)\par
+\par
+For Count <-- 1 To LENGTH(Str1)\par
+thisChar <-- Mid(Str1, Count, 1)\par
+SELECTCASE thisChar\par
+CASE "A" : ACount = ACount + 1\par
+CASE "E" : ECount = ECount + 1\par
+CASE "I" : ICount = ICount + 1\par
+CASE "O" : OCount = OCount + 1\par
+CASE "U" : UCount = UCount + 1\par
+ENDCASE\par
+NEXT\par
+OUTPUT("Count of A", ACount)\par
+OUTPUT("Count of E", ECount)\par
+OUTPUT("Count of I", ICount)\par
+OUTPUT("Count of O", OCount)\par
+OUTPUT("Count of U", UCount)\par
+}

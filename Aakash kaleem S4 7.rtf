@@ -1,0 +1,25 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil Segoe UI;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\tx720\cf1\f0\fs38 Dim Str1, Str2, Char1 As String\par
+Dim Count As Integer\par
+\par
+        Str1 = ""\par
+        Str2 = ""\par
+        Char1 = ""\par
+        Count = 0\par
+\par
+        Console.Write("Enter A String:")\par
+        Str1 = Console.ReadLine\par
+        Char1 = Left(Str1, 2)\par
+        Str2 = Str2 + Char1\par
+        Char1 = Right(Str1, 2)\par
+        Str2 = Str2 + Char1\par
+\par
+        If Len(Str1) < 2 Then\par
+            Console.WriteLine("Not enough characters." & Str1)\par
+        Else\par
+            Console.WriteLine("After Extraction:" & Str2)\par
+        End If\par
+        Console.ReadKey()\par
+}
